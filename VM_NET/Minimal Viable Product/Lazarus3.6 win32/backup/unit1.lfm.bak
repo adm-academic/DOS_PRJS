@@ -1,0 +1,57 @@
+object Form1: TForm1
+  Left = 306
+  Height = 349
+  Top = 122
+  Width = 753
+  Caption = 'Form1'
+  ClientHeight = 349
+  ClientWidth = 753
+  Font.Height = -21
+  LCLVersion = '3.6.0.0'
+  object Memo1: TMemo
+    Left = 16
+    Height = 226
+    Top = 96
+    Width = 710
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 0
+  end
+  object edMessage: TEdit
+    Left = 16
+    Height = 33
+    Top = 48
+    Width = 552
+    Font.Height = -21
+    ParentFont = False
+    TabOrder = 1
+    Text = 'edMessage'
+  end
+  object Button1: TButton
+    Left = 592
+    Height = 34
+    Top = 48
+    Width = 136
+    Caption = 'Button1'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object IdUDPServer1: TIdUDPServer
+    Active = True
+    BroadcastEnabled = True
+    Bindings = <>
+    DefaultPort = 11245
+    OnUDPRead = IdUDPServer1UDPRead
+    Left = 160
+    Top = 144
+  end
+  object IdUDPClient1: TIdUDPClient
+    Active = True
+    BroadcastEnabled = True
+    Host = '192.168.143.255'
+    Port = 11245
+    Left = 54
+    Top = 144
+  end
+end
